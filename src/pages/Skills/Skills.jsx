@@ -188,6 +188,8 @@ function Skills() {
           2xl:gap-10
           lg:grid-cols-4
           xl:grid-cols-5
+          mobilexL:grid-cols-3
+          mobile472:gap-5
           "
             >
               {skillsData.map((skill, index) => (
@@ -199,6 +201,7 @@ function Skills() {
               lg:w-[190px] lg:h-[190px]
               xl:w-[170px] xl:h-[170px]
               2xl:w-[200px] 2xl:h-[200px]
+              mobile472:w-[150px] mobile472:h-[150px]
               "
                   ref={(el) => (skillRefs.current[index] = el)}
                   key={index}
@@ -211,6 +214,8 @@ function Skills() {
                 lg:w-[180px] lg:h-[180px]
                 xl:w-[160px] xl:h-[160px]
                 2xl:w-[190px] 2xl:h-[190px]
+              mobile472:w-[140px] mobile472:h-[140px]
+
                 "
                   ></div>
                   <div

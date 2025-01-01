@@ -2,14 +2,15 @@ import AnimatedCursor from "react-animated-cursor";
 import { lazy, Suspense } from "react";
 import NavBar from "./pages/NavBar/NavBar";
 import PreLoader from "./components/PreLoader/PreLoader";
+import Contact from "./pages/Contact/Contact";
+import Footer from "./components/Footer/Footer";
 
 const About = lazy(() => import("./pages/About/About"));
 const Home = lazy(() => import("./pages/Home/Home"));
 const Skills = lazy(() => import("./pages/Skills/Skills"));
 const Projects = lazy(() => import("./pages/Projects/Projects"));
 const Career = lazy(() => import("./pages/Career/Career"));
-const Contact = lazy(() => import("./pages/Contact/Contact"));
-const Footer = lazy(() => import("./components/Footer/Footer"));
+// const Footer = lazy(() => import("./components/Footer/Footer"));
 
 const App = () => {
   return (
@@ -39,9 +40,9 @@ const App = () => {
           <Skills />
           <Projects />
           <Career />
-          <Contact />
-          <Footer />
         </Suspense>
+        <Contact />
+        <Footer />
       </div>
     </div>
   );

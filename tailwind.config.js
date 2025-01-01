@@ -7,6 +7,8 @@ export default {
     extend: {
       screens: {
         mobileL: "425px",
+        mobilexL: "500px",
+        mobile472: "472px",
       },
 
       fontFamily: {

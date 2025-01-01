@@ -14,7 +14,7 @@ function Home() {
     <div
       id="home"
       className="section flex flex-col py-4 px-4 justify-between h-full 
-      2xl:px-4   2xl:relative
+      2xl:px-4   2xl:relative 
       relative  backdrop-blur-lg overflow-hidden
       "
     >
@@ -63,10 +63,10 @@ function Home() {
       </div>
       {/* hero */}
 
-      <div className="flex flex-col items-end gap-3 text-start py-14">
+      <div className="flex flex-col items-end gap-3 text-start pb-2">
         <div className="flex flex-col">
           <p
-            className="font-subhead font-semibold text-[1.2rem] text-right pb-2 sm:text-4xl lg:text-[2.5rem]
+            className="font-subhead font-semibold text-[1.2rem] text-right pb-1 sm:text-4xl lg:text-[2.5rem]
              xl:text-[2.5rem]  2xl:text-[2.5rem]
         "
           >
@@ -84,7 +84,7 @@ function Home() {
 
         <div
           className="gap-1 justify-center items-center cursor-pointer
-         mt-4 text-yellow-500"
+         mt-1 text-yellow-500 mb-2"
         >
           <AnchorLink
             href="#contact"
