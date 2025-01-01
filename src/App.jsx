@@ -1,10 +1,10 @@
 import AnimatedCursor from "react-animated-cursor";
 import { lazy, Suspense } from "react";
-import Home from "./pages/Home/Home";
 import NavBar from "./pages/NavBar/NavBar";
 import PreLoader from "./components/PreLoader/PreLoader";
 
 const About = lazy(() => import("./pages/About/About"));
+const Home = lazy(() => import("./pages/Home/Home"));
 const Skills = lazy(() => import("./pages/Skills/Skills"));
 const Projects = lazy(() => import("./pages/Projects/Projects"));
 const Career = lazy(() => import("./pages/Career/Career"));
@@ -33,8 +33,8 @@ const App = () => {
       </div>
       <NavBar />
       <div className="w-full flex-grow h-full mt-10 p-5">
-        <Home />
         <Suspense fallback={<div>loading</div>}>
+          <Home />
           <About />
           <Skills />
           <Projects />
