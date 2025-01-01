@@ -8,8 +8,6 @@ gsap.registerPlugin(ScrollTrigger, useGSAP);
 const Experience = ({ experiences }) => {
   const educationRef = useRef([]);
 
- 
-
   return (
     <div className="max-w-4xl mx-auto p-2 w-full flex justify-center">
       <div className="sm:w-full">
@@ -34,7 +32,7 @@ const Experience = ({ experiences }) => {
               <h3
                 className="text-xl tracking-wider font-subhead text-blue-400
               sm:text-center sm:text-[1.9rem] sm:mb-3
-              md:text-center md:text-[2.1rem] md:mb-3
+              md:text-center md:text-[2.1rem] md:mb-3 xs:text-lg
               "
               >
                 {experience.title.toUpperCase()}
@@ -42,7 +40,7 @@ const Experience = ({ experiences }) => {
               <p
                 className="text-gray-300 text-[1.05rem] mt-1 font-lato
               sm:text-center sm:text-[1.2rem] 
-              md:text-center md:text-[1.4rem] 
+              md:text-center md:text-[1.4rem] xs:text-[0.93rem]  
               "
               >
                 {experience.company} | {experience.location}
@@ -60,7 +58,7 @@ const Experience = ({ experiences }) => {
                 className="list-disc pl-5 mt-4  text-gray-200
               font-texts text-[0.9rem] text-left 
               sm:text-left sm:text-[1.05rem]
-              md:text-left md:text-[1.2rem]
+              md:text-left md:text-[1.2rem] xs:text-[0.9rem] 
             "
               >
                 {experience.responsibilities.map((task, taskIndex) => (

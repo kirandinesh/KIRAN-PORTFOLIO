@@ -164,11 +164,11 @@ function About() {
     <div id="about" className="section py-4 px-4 overflow-hidden">
       <div className="xl:hidden pb-5 lg:flex lg:justify-center ">
         <div className="textBox bg-secondary-1 w-0 bg-clip-text ">
-          <div className="w-[19rem]  ">
+          <div className="w-[19rem]  xs:pr-10">
             <h1
-              className="text-5xl font-subhead text-center 
+              className="text-4xl font-subhead text-center 
             font-extrabold tracking-widest text-transparent
-            xl:text-6xl
+            xl:text-6xl xs:text-4xl 
             "
             >
               ABOUT ME

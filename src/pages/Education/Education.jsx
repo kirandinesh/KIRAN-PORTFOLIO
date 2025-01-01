@@ -17,7 +17,7 @@ const Education = ({ educationList }) => {
       <div className="sm:w-full">
         <h2
           className="text-4xl font-bold text-center text-gray-100
-          font-subhead tracking-wider mb-8"
+          font-subhead tracking-wider mb-8 xs:text-3xl xs:mb-6"
         >
           Education
         </h2>
@@ -35,14 +35,14 @@ const Education = ({ educationList }) => {
             >
               <h3
                 className="text-xl font-semibold text-blue-400
-                sm:text-2xl text-center mb-3 tracking-wide"
+                sm:text-2xl text-center mb-3 tracking-wide xs:text-base"
               >
                 {education.degree.toUpperCase()}
               </h3>
-              <p className="text-gray-300 text-base sm:text-lg text-center mb-2">
+              <p className="text-gray-300 text-base sm:text-lg text-center mb-2 xs:text-sm">
                 {education.institution}
               </p>
-              <p className="text-gray-400 text-sm sm:text-base text-center">
+              <p className="text-gray-400 text-sm sm:text-base text-center xs:text-sm">
                 {education.duration}
               </p>
             </div>

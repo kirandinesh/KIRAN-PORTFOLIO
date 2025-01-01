@@ -29,7 +29,7 @@ function Home() {
       <div className="flex flex-col ">
         <h1
           className="font-header text-4xl leading-snug
-        sm:text-5xl mobileL:text-4xl lg:text-6xl xl:text-6xl 2xl:text-6xl  
+        sm:text-5xl mobileL:text-4xl lg:text-6xl xl:text-6xl 2xl:text-6xl xs:text-3xl 
         "
         >
           Hello! I&apos;m <br />
@@ -49,7 +49,7 @@ function Home() {
             speed={50}
             repeat={Infinity}
             className="text-xl font-subhead
-            sm:text-2xl  xl:text-3xl 2xl:text-4xl
+            sm:text-2xl  xl:text-3xl 2xl:text-4xl xs:text-lg
             "
           />
         </h2>
@@ -67,14 +67,14 @@ function Home() {
         <div className="flex flex-col">
           <p
             className="font-subhead font-semibold text-[1.2rem] text-right pb-1 sm:text-4xl lg:text-[2.5rem]
-             xl:text-[2.5rem]  2xl:text-[2.5rem]
+             xl:text-[2.5rem]  2xl:text-[2.5rem] xs:text-base
         "
           >
             Welcome to my personal portfolio,
           </p>
           <p
             className="text-right text-md 
-          sm:text-3xl font-200  2xl:text-3xl font-subhead 
+          sm:text-3xl font-200  2xl:text-3xl font-subhead  xs:text-[0.95rem]
           "
           >
             where I showcase my work, skills and
@@ -93,13 +93,13 @@ function Home() {
           >
             <span
               className="font-header text-lg
-            tracking-wider sm:text-xl  xl:text-2xl 2xl:text-3xl"
+            tracking-wider sm:text-xl  xl:text-2xl 2xl:text-3xl xs:text-base"
               ref={ref}
               onMouseOver={replay}
               onFocus={replay}
             ></span>
             <span>
-              <ArrowRight className="animate-rightBounce 2xl:w-8 2xl:h-8" />
+              <ArrowRight className="animate-rightBounce 2xl:w-8 2xl:h-8 xs:w-5 xs:h-5" />
             </span>
           </AnchorLink>
         </div>

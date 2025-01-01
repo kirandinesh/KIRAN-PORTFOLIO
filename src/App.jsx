@@ -14,7 +14,7 @@ const Footer = lazy(() => import("./components/Footer/Footer"));
 const App = () => {
   return (
     <div className="w-screen h-screen ">
-      <PreLoader />
+      {/* <PreLoader /> */}
       <div className="hidden lg:flex">
         <AnimatedCursor
           innerSize={8}

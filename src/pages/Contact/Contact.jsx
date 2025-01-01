@@ -139,11 +139,12 @@ function Contact() {
       {/* Title Section */}
       <div className="xl:hidden pb-5 lg:flex lg:justify-center">
         <div className="textBox bg-secondary-1 w-0 bg-clip-text">
-          <div className="w-[19rem]">
+          <div className="w-[19rem]  xs:pr-10">
             <h1
-              className="text-5xl font-subhead text-center 
-              font-extrabold tracking-widest text-transparent
-              xl:text-6xl"
+              className="text-4xl font-subhead text-center 
+            font-extrabold tracking-widest text-transparent
+            xl:text-6xl xs:text-4xl 
+            "
             >
               CONTACT
             </h1>
@@ -191,13 +192,13 @@ function Contact() {
               <div className="relative">
                 <div
                   className={`absolute -top-12 left-1/2 -translate-x-1/2 px-4 py-2 bg-gradient-to-r 
-                    mobileL:px-3
+                    mobileL:px-3 xs:px-2
                     ${
                       isCompleted
                         ? "from-green-500 to-green-300"
                         : "from-pink-500 to-yellow-500"
                     }  rounded-full text-sm text-white font-subhead
-                sm:px-7 sm: sm:text-lg sm:tracking-wider mobileL:text-[1.2rem]`}
+                sm:px-7 sm: sm:text-lg sm:tracking-wider mobileL:text-[1.2rem] xs:text-[0.8rem]`}
                 >
                   {isCompleted ? (
                     <span className="font-subhead">&#10004; Submited</span>
@@ -211,11 +212,11 @@ function Contact() {
                 >
                   <div className="flex flex-col sm:w-full sm:px-10 items-center">
                     <form onSubmit={onSubmit} className="w-full">
-                      <div className="flex flex-col gap-4">
-                        <div className="">
+                      <div className="flex flex-col gap-4 ">
+                        <div>
                           <label
                             htmlFor="name"
-                            className="block text-lg font-medium text-white mb-1 font-subhead"
+                            className="block text-lg font-medium text-white mb-1 font-subhead xs:text-base"
                           >
                             Name
                           </label>
@@ -224,13 +225,13 @@ function Contact() {
                             name="name"
                             id="name"
                             required
-                            className="w-full border border-gray-300 rounded-lg p-2 focus:ring-blue-500 focus:border-blue-500 shadow-sm font-lato"
+                            className="w-full border border-gray-300 rounded-lg p-2 focus:ring-blue-500 focus:border-blue-500 shadow-sm font-lato xs:p-1"
                           />
                         </div>
                         <div>
                           <label
                             htmlFor="email"
-                            className="block text-lg font-medium text-white mb-1 font-subhead "
+                            className="block text-lg font-medium text-white mb-1 font-subhead xs:text-base"
                           >
                             Email
                           </label>
@@ -239,22 +240,23 @@ function Contact() {
                             name="email"
                             id="email"
                             required
-                            className="w-full border border-gray-300 rounded-lg p-2 focus:ring-blue-500 focus:border-blue-500 shadow-sm font-lato"
+                            className="w-full border border-gray-300 rounded-lg p-2 focus:ring-blue-500 focus:border-blue-500 shadow-sm font-lato xs:p-1"
                           />
                         </div>
                         <div>
                           <label
                             htmlFor="message"
-                            className="block text-lg font-medium text-white mb-1"
+                            className="block text-lg font-medium text-white 
+                            mb-1 xs:text-base"
                           >
                             Message
                           </label>
                           <textarea
                             name="message"
                             id="message"
-                            rows="4"
+                            rows="3"
                             required
-                            className="w-full border border-gray-300 rounded-lg p-2 focus:ring-blue-500 focus:border-blue-500 shadow-sm font-latox"
+                            className="w-full border border-gray-300 rounded-lg p-2 focus:ring-blue-500 focus:border-blue-500 shadow-sm font-latox xs:p-1"
                           ></textarea>
                         </div>
 
@@ -280,8 +282,16 @@ function Contact() {
                               ></path>
                             </svg>
 
-                            <span className="relative bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 bg-clip-text text-transparent font-semibold sm:">
-                              {loading ? "Sending..." : "SEND MESSAGE"}
+                            <span className="relative bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 bg-clip-text text-transparent font-semibold">
+                              {loading ? (
+                                <span className="xs:text-[0.9rem] mobile472:text-sm font-lato">
+                                  Sending...
+                                </span>
+                              ) : (
+                                <span className="xs:text-[0.65rem] mobile472:text-sm font-lato">
+                                  SEND MESSAGE
+                                </span>
+                              )}
                             </span>
 
                             <svg

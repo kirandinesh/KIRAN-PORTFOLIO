@@ -34,18 +34,18 @@ function Hero() {
             className="w-full h-full object-contain  "
           />
         </div>
-        <div className=" z-10  translate-x-[3.4rem] -translate-y-[4.5rem]">
+        <div className=" z-10  translate-x-[3.9rem] -translate-y-[5rem]">
           <div className="w-16 h-5 bg-yellow-500"></div>
           <div className="w-16 h-5 bg-yellow-500 rotate-90 translate-x-[1.35rem] translate-y-[0.9rem] "></div>
         </div>
-        <div className=" rotate-180 -translate-x-[2.9rem] translate-y-[5.4rem]">
+        <div className=" rotate-180 -translate-x-[3.45rem] translate-y-[5.8rem]">
           <div className="w-16 h-5 bg-slate-500"></div>
           <div className="w-16 h-5 bg-slate-500 rotate-90 translate-x-[1.85rem] translate-y-[0.15rem] "></div>
         </div>
       </div>
 
       {/* //////////// */}
-      <div className="hidden lg:flex  flex-col w-full h-full items-center justify-center relative">
+      <div className="hidden lg:flex  flex-col w-full h-full items-center justify-center relative ">
         <div className="squareimg scale-0 opacity-1 overflow-hidden absolute bg-yellow-500 z-0 rounded-lg h-80 shadow-md shadow-slate-300">
           <img src={hero} alt="" className="w-auto h-full object-contain  " />
         </div>

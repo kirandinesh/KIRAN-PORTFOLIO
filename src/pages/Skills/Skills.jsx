@@ -147,11 +147,12 @@ function Skills() {
       {/* Title Section */}
       <div className="xl:hidden pb-5 lg:flex lg:justify-center">
         <div className="textBox bg-secondary-1 w-0 bg-clip-text">
-          <div className="w-[19rem]">
+          <div className="w-[19rem]  xs:pr-10">
             <h1
-              className="text-5xl font-subhead text-center 
-                font-extrabold tracking-widest text-transparent
-                xl:text-6xl"
+              className="text-4xl font-subhead text-center 
+            font-extrabold tracking-widest text-transparent
+            xl:text-6xl xs:text-4xl 
+            "
             >
               SKILLS
             </h1>
@@ -173,7 +174,7 @@ function Skills() {
       {/* /// */}
 
       {/* Skill Main Section */}
-      <div className="w-full xl:p-16 2xl:px-32">
+      <div className="w-full xl:p-16 2xl:px-32 ">
         <Card
           className="overflow-hidden w-full flex justify-center items-center
         py-4 
@@ -190,6 +191,8 @@ function Skills() {
           xl:grid-cols-5
           mobilexL:grid-cols-3
           mobile472:gap-5
+          xs:gap-3
+          xs:grid-cols-2
           "
             >
               {skillsData.map((skill, index) => (
@@ -202,6 +205,7 @@ function Skills() {
               xl:w-[170px] xl:h-[170px]
               2xl:w-[200px] 2xl:h-[200px]
               mobile472:w-[150px] mobile472:h-[150px]
+              xs:w-[105px] xs:h-[105px]
               "
                   ref={(el) => (skillRefs.current[index] = el)}
                   key={index}
@@ -215,13 +219,13 @@ function Skills() {
                 xl:w-[160px] xl:h-[160px]
                 2xl:w-[190px] 2xl:h-[190px]
               mobile472:w-[140px] mobile472:h-[140px]
-
-                "
+              xs:w-[95px] xs:h-[95px]"
                   ></div>
                   <div
                     className="w-[90px] h-[90px] bg-[#131313] 
                 rounded-full absolute border-[5px] border-slate-700
                  shadow-[0px_5px_5px_0px_black,inset_0px_2px_0px_6px_black] 
+                 xs:shadow-[0px_2px_2px_0px_black,inset_0px_2px_0px_6px_black] 
                  flex justify-center items-center
                  sm:w-[110px] sm:h-[110px]
                  md:w-[140px] md:h-[140px]
@@ -232,6 +236,8 @@ function Skills() {
                  xl:border-[8px]
                  2xl:w-[150px] 2xl:h-[150px]
                  2xl:border-[14px]
+                 xs:w-[90px] xs:h-[90px]
+                 xs:border-[5px]
                  "
                   >
                     <div
@@ -239,7 +245,8 @@ function Skills() {
                       ref={(el) => (textRefs.current[index] = el)}
                     >
                       <h1
-                        className="font-subhead 
+                        className="font-subhead
+                        xs:text-sm 
                       sm:text-xl
                       md:text-2xl
                       lg:text-2xl
@@ -252,7 +259,7 @@ function Skills() {
                       </h1>
                       <h1
                         className="font-subhead text-[12.5px] text-center
-                      
+                    xs:text-[13px]
                     sm:text-[16px] 
                     md:text-[20px] 
                     lg:text-[22px] 
