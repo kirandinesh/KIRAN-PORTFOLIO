@@ -43,9 +43,10 @@ function ProjectCardTile({ proData }) {
                       flex flex-shrink-0 rounded-lg overflow-hidden"
                       >
                         <img
-                          className="w-full h-full object-center object-fill"
+                          className="w-full h-full object-center object-cover"
                           src={proData?.src}
-                          alt=""
+                          alt="project image"
+                          loading="lazy"
                         />
                       </div>
                       <div className="flex-grow">
@@ -163,10 +164,18 @@ function ProjectCardTile({ proData }) {
                         ))}
                       </ul>
                     </div>
-                    <div className="flex items-center justify-center gap-2">
+                    <a
+                      href={proData?.link || "#"}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`View project: ${
+                        proData?.link || "No link available"
+                      }`}
+                      className="flex items-center justify-center gap-2"
+                    >
                       <span className="font-header">View Project</span>
                       <BouncingArrow />
-                    </div>
+                    </a>
                   </div>
                 </div>
               </div>

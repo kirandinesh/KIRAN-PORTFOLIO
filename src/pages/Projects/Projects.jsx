@@ -3,11 +3,11 @@ import { gsap } from "gsap";
 import { useRef, lazy, Suspense } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Card } from "@/components/ui/card";
-import projectManagementImg from "/assets/projectImg/Product-management.jpg";
+import projectManagementImg from "/assets/projectImg/backendApiCover.png";
 import yotubeImg from "/assets/projectImg/youtube-clone.png";
-import calculatorImg from "/assets/projectImg/calculator.png";
+import calculatorImg from "/assets/projectImg/EcommercePage.png";
 
-import portfolioImg from "/assets/projectImg/portfolio.png";
+import portfolioImg from "/assets/projectImg/portFolioThumbline.png";
 const ProjectCardTile = lazy(() => import("./ProjectCardTile"));
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
@@ -43,7 +43,7 @@ function Projects() {
         "Comprehensive backend solutions for product and user management.",
       technologies: ["Node.js", "Express.js", "MongoDB"],
       features: ["Add-to-cart functionality.", "Efficient database handling."],
-      link: "View Project",
+      link: "#",
     },
     {
       id: 3,
@@ -57,7 +57,7 @@ function Projects() {
         "Navigation bar.",
         "Recommended video sections.",
       ],
-      link: "View Project",
+      link: "#",
     },
     {
       id: 4,
@@ -66,7 +66,7 @@ function Projects() {
       description:
         "A responsive and visually appealing website showcasing my projects, skills, and experience.",
       technologies: ["React", "Tailwind CSS", "HTML5", "JavaScript"],
-      link: "View Project",
+      link: "https://kiran-portfolio-60hp.onrender.com",
     },
   ];
 
