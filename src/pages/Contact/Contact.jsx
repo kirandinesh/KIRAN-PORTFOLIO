@@ -136,7 +136,6 @@ function Contact() {
         toggleActions: "restart complete restart none",
       },
     });
-    ScrollTrigger.refresh();
   });
 
   return (
