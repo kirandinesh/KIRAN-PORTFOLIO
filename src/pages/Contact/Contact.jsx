@@ -1,5 +1,5 @@
 import { Card } from "@/components/ui/card";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
 import { useRef } from "react";
@@ -128,6 +128,15 @@ function Contact() {
       },
     });
   });
+  useEffect(() => {
+    const triggers = ScrollTrigger.getAll();
+    ScrollTrigger.refresh();
+
+    return () => {
+      triggers.forEach((trigger) => trigger.kill());
+    };
+  }, []);
+
   return (
     <div
       id="contact"
