@@ -13,6 +13,11 @@ function Contact() {
   const [loading, setIsLoading] = useState(false);
   const titleRef = useRef(null);
   const cardBox = useRef(null);
+  const iconBox = useRef(null);
+  const borderbox1 = useRef(null);
+  const borderbox2 = useRef(null);
+  const borderbox3 = useRef(null);
+  const borderbox4 = useRef(null);
 
   const onSubmit = async (event) => {
     event.preventDefault();
@@ -83,9 +88,10 @@ function Contact() {
     });
 
     /////-------------//////
-    gsap.from(".borderbox1", {
+    gsap.from([borderbox1.current, borderbox3.current], {
       x: -100,
       duration: 2,
+      stagger: 0.15,
       ease: "power3.out",
       scrollTrigger: {
         trigger: "#contact",
@@ -95,7 +101,7 @@ function Contact() {
       },
     });
 
-    gsap.from(".borderbox2", {
+    gsap.from([borderbox2.current, borderbox4.current], {
       x: 100,
       duration: 2,
       ease: "power3.out",
@@ -106,7 +112,7 @@ function Contact() {
         toggleActions: "restart complete restart none",
       },
     });
-    gsap.from(".iconBox", {
+    gsap.from(iconBox.current, {
       y: 100,
       rotate: "360deg",
       duration: 2,
@@ -130,6 +136,7 @@ function Contact() {
         toggleActions: "restart complete restart none",
       },
     });
+    ScrollTrigger.refresh();
   });
 
   return (
@@ -176,21 +183,25 @@ function Contact() {
                 className={`borderbox1 absolute top-0 left-0 w-20 h-20 border-t-2 border-l-2 ${
                   isCompleted ? "border-green-300" : "border-pink-500"
                 }  rounded-tl-2xl`}
+                ref={borderbox1}
               ></div>
               <div
                 className={`borderbox2 absolute top-0 right-0 w-20 h-20 border-t-2 border-r-2 ${
                   isCompleted ? "border-green-500" : "border-red-400"
                 }  rounded-tr-2xl`}
+                ref={borderbox2}
               ></div>
               <div
                 className={`borderbox1 absolute bottom-0 left-0 w-20 h-20 border-b-2 border-l-2 ${
                   isCompleted ? "border-green-300" : "border-yellow-500"
                 }  rounded-bl-2xl`}
+                ref={borderbox3}
               ></div>
               <div
                 className={`borderbox2 absolute bottom-0 right-0 w-20 h-20 border-b-2 border-r-2 ${
                   isCompleted ? "border-green-300" : "border-pink-500"
                 }  rounded-br-2xl`}
+                ref={borderbox4}
               ></div>
 
               <div className="relative">
@@ -322,6 +333,7 @@ function Contact() {
                   className="iconBox absolute -bottom-12 left-1/2 -translate-x-1/2 px-2 py-2 bg-[#0077B5] rounded-full text-sm text-white font-subhead
                 sm:px-4 sm:py-4 sm:-bottom-[60px]
                 "
+                  ref={iconBox}
                 >
                   <a
                     href="https://www.linkedin.com/in/kirandinesh/"
