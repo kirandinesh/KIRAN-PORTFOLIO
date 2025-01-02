@@ -128,9 +128,6 @@ function Contact() {
       },
     });
   });
-  useEffect(() => {
-    ScrollTrigger.refresh();
-  }, []);
 
   return (
     <div
