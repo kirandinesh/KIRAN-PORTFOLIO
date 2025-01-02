@@ -77,7 +77,7 @@ function Contact() {
       scrollTrigger: {
         trigger: "#contact",
         start: "top bottom",
-        end: "center center",
+        end: "bottom 10%",
         toggleActions: "restart complete restart none",
       },
     });
@@ -90,7 +90,7 @@ function Contact() {
       scrollTrigger: {
         trigger: "#contact",
         start: "top 80%",
-        end: "bottom center",
+        end: "bottom 10%",
         toggleActions: "restart complete restart none",
       },
     });
@@ -102,7 +102,7 @@ function Contact() {
       scrollTrigger: {
         trigger: "#contact",
         start: "top 80%",
-        end: "bottom center",
+        end: "bottom 10%",
         toggleActions: "restart complete restart none",
       },
     });
@@ -114,7 +114,7 @@ function Contact() {
       scrollTrigger: {
         trigger: "#contact",
         start: "top 80%",
-        end: "bottom center",
+        end: "bottom 10%",
         toggleActions: "restart complete restart none",
       },
     });
@@ -126,7 +126,7 @@ function Contact() {
       scrollTrigger: {
         trigger: "#contact",
         start: "top 80%",
-        end: "bottom center",
+        end: "bottom 10%",
         toggleActions: "restart complete restart none",
       },
     });
