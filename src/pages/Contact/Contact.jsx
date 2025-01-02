@@ -129,12 +129,7 @@ function Contact() {
     });
   });
   useEffect(() => {
-    const triggers = ScrollTrigger.getAll();
     ScrollTrigger.refresh();
-
-    return () => {
-      triggers.forEach((trigger) => trigger.kill());
-    };
   }, []);
 
   return (
