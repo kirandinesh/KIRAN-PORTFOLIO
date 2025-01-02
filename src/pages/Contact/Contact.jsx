@@ -89,7 +89,6 @@ function Contact() {
       ease: "power3.out",
       scrollTrigger: {
         trigger: "#contact",
-        markers: true,
         start: "top 80%",
         end: "bottom center",
         toggleActions: "restart complete restart none",
