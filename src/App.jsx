@@ -10,8 +10,7 @@ const Home = lazy(() => import("./pages/Home/Home"));
 const Skills = lazy(() => import("./pages/Skills/Skills"));
 const Projects = lazy(() => import("./pages/Projects/Projects"));
 const Career = lazy(() => import("./pages/Career/Career"));
-// const Contact = lazy(() => import("./pages/Contact/Contact"));
-// const Footer = lazy(() => import("./components/Footer/Footer"));
+
 
 const App = () => {
   return (
@@ -41,8 +40,8 @@ const App = () => {
           <Skills />
           <Projects />
           <Career />
+          <Contact />
         </Suspense>
-        <Contact />
         <Footer />
       </div>
     </div>

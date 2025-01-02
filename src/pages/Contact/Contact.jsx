@@ -1,5 +1,5 @@
 import { Card } from "@/components/ui/card";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
 import { useRef } from "react";
@@ -89,7 +89,8 @@ function Contact() {
       ease: "power3.out",
       scrollTrigger: {
         trigger: "#contact",
-        start: "top center",
+        markers: true,
+        start: "top 80%",
         end: "bottom center",
         toggleActions: "restart complete restart none",
       },
@@ -102,6 +103,7 @@ function Contact() {
       scrollTrigger: {
         trigger: "#contact",
         start: "top 80%",
+        end: "bottom center",
         toggleActions: "restart complete restart none",
       },
     });
@@ -113,6 +115,7 @@ function Contact() {
       scrollTrigger: {
         trigger: "#contact",
         start: "top 80%",
+        end: "bottom center",
         toggleActions: "restart complete restart none",
       },
     });
@@ -124,6 +127,7 @@ function Contact() {
       scrollTrigger: {
         trigger: "#contact",
         start: "top 80%",
+        end: "bottom center",
         toggleActions: "restart complete restart none",
       },
     });
