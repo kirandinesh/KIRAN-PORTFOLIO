@@ -90,7 +90,7 @@ function NavBar() {
                   }`}
                   onClick={() => {
                     setActive(item.title);
-                    setMenuBar(false); // Close menu on click
+                    setMenuBar(false);
                   }}
                 >
                   {item.label}

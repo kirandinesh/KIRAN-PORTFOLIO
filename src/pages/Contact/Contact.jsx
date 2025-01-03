@@ -1,5 +1,5 @@
 import { Card } from "@/components/ui/card";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useRef } from "react";
 import { Linkedin } from "lucide-react";
 import { BackgroundLines } from "@/components/ui/background-lines";
@@ -46,98 +46,105 @@ function Contact() {
       console.log("Error", data);
     }
   };
-  useGSAP(() => {
-    if (titleRef.current) {
-      let clutter = "";
-      const h1Title = titleRef.current;
-      const splitTitleText = h1Title.textContent.split("");
 
-      splitTitleText.forEach((element) => {
-        clutter += `<span class='inline-block opacity-1'>${element}</span>`;
+  useEffect(() => {
+    const animations = () => {
+      if (titleRef.current) {
+        let clutter = "";
+        const h1Title = titleRef.current;
+        const splitTitleText = h1Title.textContent.split("");
+
+        splitTitleText.forEach((element) => {
+          clutter += `<span class='inline-block opacity-1'>${element}</span>`;
+        });
+
+        h1Title.innerHTML = clutter;
+
+        gsap.from("#SkillsectionTitle span", {
+          y: 40,
+          opacity: 0,
+          duration: 1,
+          stagger: 0.15,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: "#contact",
+            start: "top bottom",
+            end: "center center",
+            toggleActions: "restart complete restart none",
+          },
+        });
+      }
+
+      gsap.to(".textBox", {
+        width: 300,
+        duration: 2,
+        scrollTrigger: {
+          trigger: "#contact",
+          start: "top bottom",
+          end: "bottom 10%",
+          toggleActions: "restart complete restart none",
+        },
       });
 
-      h1Title.innerHTML = clutter;
-
-      gsap.from("#SkillsectionTitle span", {
-        y: 40,
-        opacity: 0,
-        duration: 1,
+      gsap.from([borderbox1.current, borderbox3.current], {
+        x: -100,
+        duration: 2,
         stagger: 0.15,
         ease: "power3.out",
         scrollTrigger: {
           trigger: "#contact",
-          start: "top bottom",
-          end: "center center",
+          start: "top 80%",
+          end: "bottom 10%",
           toggleActions: "restart complete restart none",
         },
       });
-    }
 
-    //text animation
+      gsap.from([borderbox2.current, borderbox4.current], {
+        x: 100,
+        duration: 2,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: "#contact",
+          start: "top 80%",
+          end: "bottom 10%",
+          toggleActions: "restart complete restart none",
+        },
+      });
 
-    ////////-----------////////
-    gsap.to(".textBox", {
-      width: 300,
-      duration: 2,
-      scrollTrigger: {
-        trigger: "#contact",
-        start: "top bottom",
-        end: "bottom 10%",
-        toggleActions: "restart complete restart none",
-      },
-    });
+      gsap.from(iconBox.current, {
+        y: 100,
+        rotate: "360deg",
+        duration: 2,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: "#contact",
+          start: "top 80%",
+          end: "bottom 10%",
+          toggleActions: "restart complete restart none",
+        },
+      });
 
-    /////-------------//////
-    gsap.from([borderbox1.current, borderbox3.current], {
-      x: -100,
-      duration: 2,
-      stagger: 0.15,
-      ease: "power3.out",
-      scrollTrigger: {
-        trigger: "#contact",
-        start: "top 80%",
-        end: "bottom 10%",
-        toggleActions: "restart complete restart none",
-      },
-    });
+      gsap.from(cardBox.current, {
+        scale: 0,
+        duration: 1.5,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: "#contact",
+          start: "top 80%",
+          end: "bottom 10%",
+          toggleActions: "restart complete restart none",
+        },
+      });
 
-    gsap.from([borderbox2.current, borderbox4.current], {
-      x: 100,
-      duration: 2,
-      ease: "power3.out",
-      scrollTrigger: {
-        trigger: "#contact",
-        start: "top 80%",
-        end: "bottom 10%",
-        toggleActions: "restart complete restart none",
-      },
-    });
-    gsap.from(iconBox.current, {
-      y: 100,
-      rotate: "360deg",
-      duration: 2,
-      ease: "power3.out",
-      scrollTrigger: {
-        trigger: "#contact",
-        start: "top 80%",
-        end: "bottom 10%",
-        toggleActions: "restart complete restart none",
-      },
-    });
-    //////-----/////
-    gsap.from(cardBox.current, {
-      scale: 0,
-      duration: 1.5,
-      ease: "power3.out",
-      scrollTrigger: {
-        trigger: "#contact",
-        start: "top 80%",
-        end: "bottom 10%",
-        toggleActions: "restart complete restart none",
-      },
-    });
-  });
+      ScrollTrigger.refresh();
+    };
 
+    animations();
+
+    return () => {
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+    };
+  }, []);
   return (
     <div
       id="contact"
