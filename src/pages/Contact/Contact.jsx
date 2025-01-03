@@ -84,31 +84,6 @@ function Contact() {
     });
 
     /////-------------//////
-
-    gsap.to(iconBox.current, {
-      y: 100,
-      rotate: "360deg",
-      duration: 2,
-      ease: "power3.out",
-      scrollTrigger: {
-        trigger: "#contact",
-        start: "top 80%",
-        end: "bottom 10%",
-        toggleActions: "restart complete restart none",
-      },
-    });
-    //////-----/////
-    gsap.to(cardBox.current, {
-      scale: 0,
-      duration: 1.5,
-      ease: "power3.out",
-      scrollTrigger: {
-        trigger: "#contact",
-        start: "top 80%",
-        end: "bottom 10%",
-        toggleActions: "restart complete restart none",
-      },
-    });
   });
 
   return (
