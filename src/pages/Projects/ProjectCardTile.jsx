@@ -2,8 +2,16 @@
 import BouncingArrow from "@/components/ui/bounceArrow";
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { CircleArrowRight } from "lucide-react";
+import { useEffect, useState } from "react";
 
 function ProjectCardTile({ proData }) {
+  const [windowWidth, setWindowWidth] = useState(null);
+
+  useEffect(() => {
+    setWindowWidth(window.innerWidth);
+
+    console.log(window.innerWidth);
+  }, []);
   return (
     <div
       className="w-full h-full rounded-lg  flex justify-center 
@@ -171,12 +179,29 @@ function ProjectCardTile({ proData }) {
                       aria-label={`View project: ${
                         proData?.link || "No link available"
                       }`}
-                      className={`${
-                        proData?.link ? "flex" : "hidden"
-                      } items-center justify-center gap-2`}
+                      className={`${proData?.link ? "flex" : "hidden"} ${
+                        proData?.link ===
+                          "https://mern-e-commerce-website-1-2t7z.onrender.com" ||
+                        windowWidth >= 1024
+                          ? "pointer-events-none cursor-not-allowed text-gray-500 line-through "
+                          : ""
+                      }  items-center justify-center gap-2`}
                     >
-                      <span className="font-header">View Project</span>
-                      <BouncingArrow />
+                      <div className="flex  flex-col">
+                        <div className="flex gap-2">
+                          <span className="font-header">View Project</span>
+                          <BouncingArrow />
+                        </div>
+                        {proData?.link ===
+                          "https://mern-e-commerce-website-1-2t7z.onrender.com" ||
+                        windowWidth >= 1024 ? (
+                          <span className="text-red-600 font-lato text-lg tracking-wider font-semibold">
+                            Desktop View Only
+                          </span>
+                        ) : (
+                          ""
+                        )}
+                      </div>
                     </a>
                   </div>
                 </div>

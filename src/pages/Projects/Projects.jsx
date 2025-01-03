@@ -33,7 +33,7 @@ function Projects() {
         "Product management and add-to-cart functionality.",
         "RESTful APIs for efficient backend operations.",
       ],
-      link: "https://mern-e-commerce-website-1-2t7z.onrender.com/auth/login",
+      link: "https://mern-e-commerce-website-1-2t7z.onrender.com",
     },
     {
       id: 2,
@@ -151,7 +151,7 @@ function Projects() {
 
       {/* /// */}
 
-      {/* Skill Main Section */}
+      {/*  Main Section */}
       <div className="w-full  xl:p-16 2xl:px-32 ">
         <Card
           ref={projectCardRef}
