@@ -171,7 +171,9 @@ function ProjectCardTile({ proData }) {
                       aria-label={`View project: ${
                         proData?.link || "No link available"
                       }`}
-                      className="flex items-center justify-center gap-2"
+                      className={`${
+                        proData?.link ? "flex" : "hidden"
+                      } items-center justify-center gap-2`}
                     >
                       <span className="font-header">View Project</span>
                       <BouncingArrow />

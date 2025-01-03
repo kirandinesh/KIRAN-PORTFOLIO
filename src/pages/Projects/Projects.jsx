@@ -43,7 +43,6 @@ function Projects() {
         "Comprehensive backend solutions for product and user management.",
       technologies: ["Node.js", "Express.js", "MongoDB"],
       features: ["Add-to-cart functionality.", "Efficient database handling."],
-      link: "#",
     },
     {
       id: 3,
@@ -57,7 +56,6 @@ function Projects() {
         "Navigation bar.",
         "Recommended video sections.",
       ],
-      link: "#",
     },
     {
       id: 4,
