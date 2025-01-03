@@ -85,7 +85,7 @@ function Contact() {
 
     /////-------------//////
 
-    gsap.from(iconBox.current, {
+    gsap.to(iconBox.current, {
       y: 100,
       rotate: "360deg",
       duration: 2,
@@ -98,7 +98,7 @@ function Contact() {
       },
     });
     //////-----/////
-    gsap.from(cardBox.current, {
+    gsap.to(cardBox.current, {
       scale: 0,
       duration: 1.5,
       ease: "power3.out",
