@@ -1,11 +1,11 @@
 import { Card } from "@/components/ui/card";
 import { useState } from "react";
-import { useGSAP } from "@gsap/react";
-import { gsap } from "gsap";
 import { useRef } from "react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Linkedin } from "lucide-react";
 import { BackgroundLines } from "@/components/ui/background-lines";
+import { useGSAP } from "@gsap/react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
 function Contact() {

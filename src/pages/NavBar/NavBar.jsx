@@ -68,7 +68,7 @@ function NavBar() {
       </nav>
 
       {/* Mobile Navbar */}
-      <header className="lg:hidden fixed top-0 left-0 right-0  font-subhead font-semibold bg-primary-background  z-10 shadow-md">
+      <header className="lg:hidden fixed top-0 left-0 right-0   font-subhead font-semibold bg-primary-background  z-10 shadow-md">
         <div className="flex justify-between items-center px-4 py-3">
           <h1 className="text-white font-bold">Portfolio</h1>
           <MenuIcon
