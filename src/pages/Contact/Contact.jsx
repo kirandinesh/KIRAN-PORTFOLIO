@@ -1,11 +1,11 @@
 import { Card } from "@/components/ui/card";
-import { useEffect, useState } from "react";
-import { useRef } from "react";
-import { Linkedin } from "lucide-react";
-import { BackgroundLines } from "@/components/ui/background-lines";
+import { useState } from "react";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
+import { useRef } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Linkedin } from "lucide-react";
+import { BackgroundLines } from "@/components/ui/background-lines";
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
 function Contact() {
@@ -14,10 +14,6 @@ function Contact() {
   const titleRef = useRef(null);
   const cardBox = useRef(null);
   const iconBox = useRef(null);
-  const borderbox1 = useRef(null);
-  const borderbox2 = useRef(null);
-  const borderbox3 = useRef(null);
-  const borderbox4 = useRef(null);
 
   const onSubmit = async (event) => {
     event.preventDefault();
@@ -46,105 +42,75 @@ function Contact() {
       console.log("Error", data);
     }
   };
+  useGSAP(() => {
+    if (titleRef.current) {
+      let clutter = "";
+      const h1Title = titleRef.current;
+      const splitTitleText = h1Title.textContent.split("");
 
-  useEffect(() => {
-    const animations = () => {
-      if (titleRef.current) {
-        let clutter = "";
-        const h1Title = titleRef.current;
-        const splitTitleText = h1Title.textContent.split("");
-
-        splitTitleText.forEach((element) => {
-          clutter += `<span class='inline-block opacity-1'>${element}</span>`;
-        });
-
-        h1Title.innerHTML = clutter;
-
-        gsap.from("#SkillsectionTitle span", {
-          y: 40,
-          opacity: 0,
-          duration: 1,
-          stagger: 0.15,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: "#contact",
-            start: "top bottom",
-            end: "center center",
-            toggleActions: "restart complete restart none",
-          },
-        });
-      }
-
-      gsap.to(".textBox", {
-        width: 300,
-        duration: 2,
-        scrollTrigger: {
-          trigger: "#contact",
-          start: "top bottom",
-          end: "bottom 10%",
-          toggleActions: "restart complete restart none",
-        },
+      splitTitleText.forEach((element) => {
+        clutter += `<span class='inline-block opacity-1'>${element}</span>`;
       });
 
-      gsap.from([borderbox1.current, borderbox3.current], {
-        x: -100,
-        duration: 2,
+      h1Title.innerHTML = clutter;
+
+      gsap.from("#SkillsectionTitle span", {
+        y: 40,
+        opacity: 0,
+        duration: 1,
         stagger: 0.15,
         ease: "power3.out",
         scrollTrigger: {
           trigger: "#contact",
-          start: "top 80%",
-          end: "bottom 10%",
+          start: "top bottom",
+          end: "center center",
           toggleActions: "restart complete restart none",
         },
       });
+    }
 
-      gsap.from([borderbox2.current, borderbox4.current], {
-        x: 100,
-        duration: 2,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: "#contact",
-          start: "top 80%",
-          end: "bottom 10%",
-          toggleActions: "restart complete restart none",
-        },
-      });
+    //text animation
 
-      gsap.from(iconBox.current, {
-        y: 100,
-        rotate: "360deg",
-        duration: 2,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: "#contact",
-          start: "top 80%",
-          end: "bottom 10%",
-          toggleActions: "restart complete restart none",
-        },
-      });
+    ////////-----------////////
+    gsap.to(".textBox", {
+      width: 300,
+      duration: 2,
+      scrollTrigger: {
+        trigger: "#contact",
+        start: "top bottom",
+        end: "bottom 10%",
+        toggleActions: "restart complete restart none",
+      },
+    });
 
-      gsap.from(cardBox.current, {
-        scale: 0,
-        duration: 1.5,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: "#contact",
-          start: "top 80%",
-          end: "bottom 10%",
-          toggleActions: "restart complete restart none",
-        },
-      });
+    /////-------------//////
 
-      ScrollTrigger.refresh();
-    };
+    gsap.from(iconBox.current, {
+      y: 100,
+      rotate: "360deg",
+      duration: 2,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: "#contact",
+        start: "top 80%",
+        end: "bottom 10%",
+        toggleActions: "restart complete restart none",
+      },
+    });
+    //////-----/////
+    gsap.from(cardBox.current, {
+      scale: 0,
+      duration: 1.5,
+      ease: "power3.out",
+      scrollTrigger: {
+        trigger: "#contact",
+        start: "top 80%",
+        end: "bottom 10%",
+        toggleActions: "restart complete restart none",
+      },
+    });
+  });
 
-    animations();
-
-    return () => {
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
-    };
-  }, []);
   return (
     <div
       id="contact"
@@ -189,25 +155,21 @@ function Contact() {
                 className={`borderbox1 absolute top-0 left-0 w-20 h-20 border-t-2 border-l-2 ${
                   isCompleted ? "border-green-300" : "border-pink-500"
                 }  rounded-tl-2xl`}
-                ref={borderbox1}
               ></div>
               <div
                 className={`borderbox2 absolute top-0 right-0 w-20 h-20 border-t-2 border-r-2 ${
                   isCompleted ? "border-green-500" : "border-red-400"
                 }  rounded-tr-2xl`}
-                ref={borderbox2}
               ></div>
               <div
                 className={`borderbox1 absolute bottom-0 left-0 w-20 h-20 border-b-2 border-l-2 ${
                   isCompleted ? "border-green-300" : "border-yellow-500"
                 }  rounded-bl-2xl`}
-                ref={borderbox3}
               ></div>
               <div
                 className={`borderbox2 absolute bottom-0 right-0 w-20 h-20 border-b-2 border-r-2 ${
                   isCompleted ? "border-green-300" : "border-pink-500"
                 }  rounded-br-2xl`}
-                ref={borderbox4}
               ></div>
 
               <div className="relative">
