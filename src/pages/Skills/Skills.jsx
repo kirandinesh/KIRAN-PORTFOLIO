@@ -189,7 +189,7 @@ function Skills() {
           2xl:gap-10
           lg:grid-cols-4
           xl:grid-cols-5
-          mobilexL:grid-cols-3
+          mobilexL:grid-cols-2
           mobile472:gap-5
           xs:gap-3
           xs:grid-cols-2
