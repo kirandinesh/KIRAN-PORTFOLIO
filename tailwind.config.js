@@ -10,6 +10,7 @@ export default {
         mobilexL: "500px",
         mobile472: "472px",
         xs: "325px",
+        XXL: "1900px",
       },
 
       fontFamily: {

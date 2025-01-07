@@ -45,7 +45,7 @@ function Hero() {
       </div>
 
       {/* //////////// */}
-      <div className="hidden lg:flex  flex-col w-full h-full items-center justify-center relative ">
+      <div className="hidden lg:flex flex-col w-full h-full items-center justify-center relative  lg:scale-[70%] xl:flex xl:scale-[70%]  2xl:flex 2xl:scale-[90%] XXL:flex XXL:scale-[120%]">
         <div className="squareimg scale-0 opacity-1 overflow-hidden absolute bg-yellow-500 z-0 rounded-lg h-80 shadow-md shadow-slate-300">
           <img src={hero} alt="" className="w-auto h-full object-contain  " />
         </div>
