@@ -66,7 +66,7 @@ function Home() {
       <div className="flex flex-col items-end gap-3 text-start pb-2">
         <div className="flex flex-col">
           <p
-            className="font-subhead font-semibold text-[1.2rem] text-right pb-1 sm:text-4xl lg:text-[2.5rem]
+            className="font-subhead font-semibold text-[1.2rem] text-right pb-1 sm:text-4xl md:text-[1.7rem] lg:text-[2.5rem]
              xl:text-[2.2rem]  2xl:text-[2.5rem] xs:text-base
         "
           >
@@ -74,7 +74,7 @@ function Home() {
           </p>
           <p
             className="text-right text-md 
-          sm:text-3xl font-200 xl:text-[1.8rem]  2xl:text-3xl font-subhead  xs:text-[0.95rem]
+          sm:text-3xl md:text-[1.5rem] md:leading-8 font-200 xl:text-[1.8rem]  2xl:text-3xl font-subhead  xs:text-[0.95rem]
           "
           >
             where I showcase my work, skills and
