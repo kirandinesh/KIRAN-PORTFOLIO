@@ -56,7 +56,7 @@ function Career() {
 
       h1Title.innerHTML = clutter;
 
-      gsap.from("#SkillsectionTitle span", {
+      gsap.from("#CareersectionTitle span", {
         y: 40,
         opacity: 0,
         duration: 1,
@@ -134,7 +134,7 @@ function Career() {
           className="Maintitle text-5xl font-subhead text-center 
                 font-extrabold tracking-widest 
                 xl:text-6xl"
-          id="SkillsectionTitle"
+          id="CareersectionTitle"
           ref={titleRef}
         >
           CAREER

@@ -54,7 +54,7 @@ function Contact() {
 
       h1Title.innerHTML = clutter;
 
-      gsap.from("#SkillsectionTitle span", {
+      gsap.from("#ContactsectionTitle span", {
         y: 40,
         opacity: 0,
         duration: 1,
@@ -115,7 +115,7 @@ function Contact() {
           className="Maintitle text-5xl font-subhead text-center 
               font-extrabold tracking-widest 
               xl:text-6xl"
-          id="SkillsectionTitle"
+          id="ContactsectionTitle"
           ref={titleRef}
         >
           CONTACT
