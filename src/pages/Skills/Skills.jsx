@@ -15,8 +15,8 @@ function Skills() {
     { skillName: "HTML", degree: 90, skillColor: "#E44D26" },
     { skillName: "JS", degree: 70, skillColor: "#F7DF1E" },
     { skillName: "React", degree: 65, skillColor: "#61DAFB" },
-    { skillName: "CSS3", degree: 50, skillColor: "#1572B6" },
-    { skillName: "Bootstrap", degree: 50, skillColor: "#563D7C" },
+    { skillName: "CSS3", degree: 90, skillColor: "#1572B6" },
+    { skillName: "Bootstrap", degree: 65, skillColor: "#563D7C" },
     {
       skillName: (
         <>
@@ -25,7 +25,7 @@ function Skills() {
           CSS
         </>
       ),
-      degree: 40,
+      degree: 70,
       skillColor: "#06B6D4",
     },
     {
@@ -34,23 +34,23 @@ function Skills() {
           Redux <br /> Toolkit
         </>
       ),
-      degree: 45,
+      degree:60,
       skillColor: "#764ABC",
     },
     { skillName: "Node.js", degree: 60, skillColor: "#8CC84B" },
-    { skillName: "Express.js", degree: 50, skillColor: "#4D4D4D" },
+    { skillName: "Express.js", degree: 60, skillColor: "#4D4D4D" },
     { skillName: "MongoDB", degree: 55, skillColor: "#47A248" },
-    { skillName: "Git", degree: 70, skillColor: "#F1502F" },
+    { skillName: "GitHub", degree: 70, skillColor: "#F1502F" },
     {
       skillName: (
         <>
           RESTFULL <br /> APIs
         </>
       ),
-      degree: 50,
+      degree: 65,
       skillColor: "#659B41",
     },
-    { skillName: "Photoshop", degree: 60, skillColor: "#31A8FF" },
+    { skillName: "Photoshop", degree: 65, skillColor: "#31A8FF" },
   ];
 
   useGSAP(() => {
