@@ -367,10 +367,22 @@ function ProjectCardTile({ proData }) {
                             ))}
                           </ul>
                         </div>
-                        <div className="flex items-center justify-center gap-2">
-                          <span className="font-header">View Project</span>
-                          <BouncingArrow />
-                        </div>
+                        <a
+                          href={proData?.link || "#"}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label={`View project: ${
+                            proData?.link || "No link available"
+                          }`}
+                          className={`${proData?.link ? "flex" : "hidden"}  items-center justify-center gap-2`}
+                        >
+                          <div className="flex  flex-col">
+                            <div className="flex gap-2">
+                              <span className="font-header">View Project</span>
+                              <BouncingArrow />
+                            </div>
+                          </div>
+                        </a>
                       </div>
                     </div>
                   </div>
