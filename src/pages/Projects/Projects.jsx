@@ -3,11 +3,12 @@ import { gsap } from "gsap";
 import { useRef, lazy, Suspense } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Card } from "@/components/ui/card";
-import projectManagementImg from "/assets/projectImg/backendApiCover.png";
-import yotubeImg from "/assets/projectImg/youtube-clone.png";
-import calculatorImg from "/assets/projectImg/EcommercePage.png";
+import projectManagementImg from "/assets/projectImg/backendApiCover.avif";
 
-import portfolioImg from "/assets/projectImg/portFolioThumbline.png";
+import ecommerceImg from "/assets/projectImg/EcommercePage.avif";
+
+import portfolioImg from "/assets/projectImg/portFolioThumbline.avif";
+import kalolsavamImg from "/assets/projectImg/kalolsavamImg.avif";
 const ProjectCardTile = lazy(() => import("./ProjectCardTile"));
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
@@ -18,7 +19,7 @@ function Projects() {
   const projectData = [
     {
       id: 1,
-      src: calculatorImg,
+      src: ecommerceImg,
       title: "E-Commerce Website",
       description: "A full-stack e-commerce platform with responsive design.",
       technologies: [
@@ -37,25 +38,33 @@ function Projects() {
     },
     {
       id: 2,
+      src: kalolsavamImg,
+      title: "Kannur University Kalolsavam Website",
+      description:
+        "A dynamic website for Kannur University's Kalolsavam, displaying real-time event results and schedules.",
+      technologies: [
+        "React.js",
+        "Context API",
+        "Node.js",
+        "MongoDB",
+        "Express.js",
+      ],
+      features: [
+        "Updates of college base points.",
+        "Points tracking for each event.",
+        "Event schedule and result publishing.",
+        "Admin panel for event and point management.",
+      ],
+      link: "https://kannur-university-kalolsavam-1.onrender.com/",
+    },
+    {
+      id: 3,
       src: projectManagementImg,
       title: "E-Commerce Backend API",
       description:
         "Comprehensive backend solutions for product and user management.",
       technologies: ["Node.js", "Express.js", "MongoDB"],
       features: ["Add-to-cart functionality.", "Efficient database handling."],
-    },
-    {
-      id: 3,
-      src: yotubeImg,
-      title: "YouTube Clone",
-      description:
-        "A frontend replica of YouTube’s interface, offering a clean, user-friendly design.",
-      technologies: ["HTML5", "CSS3", "JavaScript"],
-      features: [
-        "Video grid layout.",
-        "Navigation bar.",
-        "Recommended video sections.",
-      ],
     },
     {
       id: 4,
