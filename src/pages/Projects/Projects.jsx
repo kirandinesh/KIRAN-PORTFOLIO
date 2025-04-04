@@ -34,7 +34,7 @@ function Projects() {
         "Product management and add-to-cart functionality.",
         "RESTful APIs for efficient backend operations.",
       ],
-      link: "https://mern-e-commerce-website-1-2t7z.onrender.com",
+      link: "https://mern-e-commerce-website-1-v5bp.onrender.com",
     },
     {
       id: 2,
@@ -55,7 +55,7 @@ function Projects() {
         "Event schedule and result publishing.",
         "Admin panel for event and point management.",
       ],
-      link: "https://kannur-university-kalolsavam-1.onrender.com/",
+      link: "https://kannur-university-kalolsavam-2wto.onrender.com",
     },
     {
       id: 3,
@@ -73,7 +73,7 @@ function Projects() {
       description:
         "A responsive and visually appealing website showcasing my projects, skills, and experience.",
       technologies: ["React", "Tailwind CSS", "HTML5", "JavaScript"],
-      link: "https://kiran-portfolio-60hp.onrender.com",
+      link: "https://kirandineshportfolio.netlify.app",
     },
   ];
 
