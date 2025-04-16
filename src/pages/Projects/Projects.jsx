@@ -9,6 +9,8 @@ import ecommerceImg from "/assets/projectImg/EcommercePage.avif";
 
 import portfolioImg from "/assets/projectImg/portFolioThumbline.avif";
 import kalolsavamImg from "/assets/projectImg/kalolsavamImg.avif";
+import expenseTrackerImg from "/assets/projectImg/expenseTrackerImg.avif";
+
 const ProjectCardTile = lazy(() => import("./ProjectCardTile"));
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
@@ -74,6 +76,21 @@ function Projects() {
         "A responsive and visually appealing website showcasing my projects, skills, and experience.",
       technologies: ["React", "Tailwind CSS", "HTML5", "JavaScript"],
       link: "https://kirandineshportfolio.netlify.app",
+    },
+    {
+      id: 5,
+      src: expenseTrackerImg,
+      title: "Personal Expense Tracker Application",
+      description:
+        "A full-stack expense tracker with charts, CSV import, and secure authentication.",
+      technologies: ["MongoDB", "Express.js", "Angular", "Node.js"],
+      features: [
+        "User login/signup and session management.",
+        "Expense tracking with Bar and Pie charts.",
+        "CSV import and custom category creation.",
+        "Auto logout and secure data handling.",
+      ],
+      link: "https://finmate-expense.netlify.app",
     },
   ];
 
