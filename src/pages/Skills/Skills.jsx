@@ -14,7 +14,8 @@ function Skills() {
   const skillsData = [
     { skillName: "HTML", degree: 90, skillColor: "#E44D26" },
     { skillName: "JS", degree: 70, skillColor: "#F7DF1E" },
-    { skillName: "React", degree: 65, skillColor: "#61DAFB" },
+    { skillName: "React", degree: 75, skillColor: "#61DAFB" },
+    { skillName: "Angular", degree: 80, skillColor: "#DD0031" },
     { skillName: "CSS3", degree: 90, skillColor: "#1572B6" },
     { skillName: "Bootstrap", degree: 65, skillColor: "#563D7C" },
     {
@@ -34,7 +35,7 @@ function Skills() {
           Redux <br /> Toolkit
         </>
       ),
-      degree:60,
+      degree: 60,
       skillColor: "#764ABC",
     },
     { skillName: "Node.js", degree: 60, skillColor: "#8CC84B" },

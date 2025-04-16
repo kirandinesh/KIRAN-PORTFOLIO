@@ -61,15 +61,6 @@ function Projects() {
     },
     {
       id: 3,
-      src: projectManagementImg,
-      title: "E-Commerce Backend API",
-      description:
-        "Comprehensive backend solutions for product and user management.",
-      technologies: ["Node.js", "Express.js", "MongoDB"],
-      features: ["Add-to-cart functionality.", "Efficient database handling."],
-    },
-    {
-      id: 4,
       src: portfolioImg,
       title: "Personal Portfolio Website",
       description:
@@ -78,7 +69,7 @@ function Projects() {
       link: "https://kirandineshportfolio.netlify.app",
     },
     {
-      id: 5,
+      id: 4,
       src: expenseTrackerImg,
       title: "Personal Expense Tracker Application",
       description:
@@ -91,6 +82,15 @@ function Projects() {
         "Auto logout and secure data handling.",
       ],
       link: "https://finmate-expense.netlify.app",
+    },
+    {
+      id: 5,
+      src: projectManagementImg,
+      title: "E-Commerce Backend API",
+      description:
+        "Comprehensive backend solutions for product and user management.",
+      technologies: ["Node.js", "Express.js", "MongoDB"],
+      features: ["Add-to-cart functionality.", "Efficient database handling."],
     },
   ];
 
