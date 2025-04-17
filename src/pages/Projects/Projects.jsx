@@ -10,6 +10,7 @@ import ecommerceImg from "/assets/projectImg/EcommercePage.avif";
 import portfolioImg from "/assets/projectImg/portFolioThumbline.avif";
 import kalolsavamImg from "/assets/projectImg/kalolsavamImg.avif";
 import expenseTrackerImg from "/assets/projectImg/expenseTrackerImg.avif";
+import angularPortfolioImg from "/assets/projectImg/angularPortfolioImg.avif";
 
 const ProjectCardTile = lazy(() => import("./ProjectCardTile"));
 
@@ -62,7 +63,7 @@ function Projects() {
     {
       id: 3,
       src: portfolioImg,
-      title: "Personal Portfolio Website",
+      title: "Personal Portfolio Website (React)",
       description:
         "A responsive and visually appealing website showcasing my projects, skills, and experience.",
       technologies: ["React", "Tailwind CSS", "HTML5", "JavaScript"],
@@ -70,6 +71,22 @@ function Projects() {
     },
     {
       id: 4,
+      src: angularPortfolioImg,
+      title: "Personal Portfolio Website (Angular)",
+      description:
+        "A clean and modern portfolio website built using Angular to showcase my projects, skills, and contact details.",
+      technologies: ["Angular", "Tailwind CSS", "TypeScript", "HTML5", "CSS"],
+      features: [
+        "Modular architecture with reusable components.",
+        "Responsive design with Tailwind CSS.",
+        "Angular routing for smooth navigation.",
+        "Dynamic project section powered by TypeScript.",
+      ],
+      link: "https://portfolio-kiran1.netlify.app",
+    },
+
+    {
+      id: 5,
       src: expenseTrackerImg,
       title: "Personal Expense Tracker Application",
       description:
@@ -84,7 +101,7 @@ function Projects() {
       link: "https://finmate-expense.netlify.app",
     },
     {
-      id: 5,
+      id: 6,
       src: projectManagementImg,
       title: "E-Commerce Backend API",
       description:
