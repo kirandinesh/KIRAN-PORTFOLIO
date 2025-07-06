@@ -7,7 +7,7 @@ import { TextGenerateEffect } from "../../components/ui/text-generate-effect";
 
 gsap.registerPlugin(ScrollTrigger, useGSAP);
 
-const PDF_FILE_URL = `${import.meta.env.VITE_URL}/Kiran_Dinesh_Resume.pdf`;
+const PDF_FILE_URL = `${import.meta.env.VITE_URL}/Kiran_Dinesh.pdf`;
 
 function About() {
   const words = `I'm Kiran Dinesh, a passionate Full Stack Developer from Kannur, Kerala. I specialize in creating responsive frontends and scalable backends using the MERN stack (MongoDB, Express.js, React, Node.js). I recently completed my B.Tech in Computer Science and Engineering from St. Thomas College of Engineering and Technology.
