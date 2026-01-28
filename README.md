@@ -2,46 +2,59 @@
 
 🔗 Live Demo: https://kirandineshportfolio.netlify.app
 
-This is my personal portfolio website built using React to showcase my
-skills, projects, education, and contact information in a clean,
-responsive, and interactive design.
+This is my personal portfolio website built using **React and Vite** to showcase
+my projects, technical skills, experience, and contact information in a clean,
+modern, and interactive interface.
 
-The portfolio is designed to reflect my profile as a Full Stack Developer
-with hands-on experience in MERN and MEAN stack projects.
+The portfolio is designed to reflect my profile as a **Full Stack Developer
+(MERN / MEAN)** with a strong focus on UI, animations, and performance.
 
 ---
 
 ## 🛠 Tech Stack
 
-- React.js
-- JavaScript (ES6+)
-- HTML5
-- CSS3
-- Responsive UI Design
-- Netlify (Deployment)
+### Frontend
+- React
+- Vite
+- React Router DOM
+- Tailwind CSS
+- Radix UI
+- GSAP (animations)
+
+### UI & Interaction
+- Smooth scrolling (react-scroll, anchor links)
+- Typing & text animations
+- Animated cursor and hover effects
+- Icon system using Lucide Icons
+
+### Styling
+- Tailwind CSS
+- tailwind-merge
+- tailwindcss-animate
 
 ---
 
-## ✨ Features
+## ✨ Key Features
 
 - Modern single-page portfolio built with React
-- About Me section with professional summary
-- Skills section with visual progress indicators
-- Projects showcase section
-- Education & career timeline
-- Contact form for direct communication
-- Fully responsive across desktop & mobile devices
-- Smooth UI animations and transitions
+- Fast development and optimized builds using Vite
+- Smooth page navigation and scroll-based interactions
+- Animated sections and transitions
+- Projects showcase with live links
+- Skills and tech stack overview
+- Contact section for easy communication
+- Fully responsive design across devices
+- Clean and accessible UI components
 
 ---
 
 ## 📂 Sections Included
 
-- Home / Hero Section
+- Hero / Introduction
 - About Me
-- Skills Overview
-- Projects
-- Education
+- Skills & Tech Stack
+- Projects Showcase
+- Experience & Education
 - Contact
 
 ---
@@ -49,12 +62,22 @@ with hands-on experience in MERN and MEAN stack projects.
 ## 🚀 Purpose of the Project
 
 This portfolio serves as a professional platform to:
-- Present my technical skills
+- Present my technical skills and experience
 - Showcase real-world and full-stack projects
-- Provide easy access to my resume and contact details
+- Provide quick access to my resume, GitHub, and contact details
+- Demonstrate frontend development and UI/UX capabilities
 
 ---
 
+## 📸 Screenshots
+
+The repository includes screenshots of:
+- Landing / Hero section
+- Projects section
+- Skills & animations
+- Responsive mobile view
+
+---
 
 ## 👤 Author
 
